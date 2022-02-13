@@ -1,0 +1,21 @@
+database:
+  default:
+    engine: "postgres"
+    host: "${DB_HOST} || 127.0.0.1"
+    dbname: "${DB_NAME} || wilddog"
+    user: "${DB_USER} || wilddog"
+    password: "${DB_PASSWORD} || test"
+    port: "${DB_PORT} || 5432"
+    max_conns: "${DB_MAX_CONNS} || 100"
+    max_idle_conns: "${DB_MAX_IDLE_CONNS} || 10"
+    max_idle_timeout: "${DB_MAX_IDLE_TIMEOUT} || 0"
+    debug: true
+web_server:
+  host: "127.0.0.1"
+  port: 8003
+user:
+  default_pwd: "test"
+  default_avatar: ""
+cors:
+  white_list:
+    - "*"
