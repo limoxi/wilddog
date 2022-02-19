@@ -12,6 +12,8 @@ func (this *AuthMiddleware) Init() {
 }
 
 func (this *AuthMiddleware) PreRequest(ctx *gin.Context) {
+	uuid := ctx.GetHeader("Authorization")
+	ctx.Set("uuid", uuid)
 }
 
 func (this *AuthMiddleware) AfterResponse(ctx *gin.Context) {
